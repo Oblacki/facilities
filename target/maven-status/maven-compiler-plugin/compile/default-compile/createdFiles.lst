@@ -1,8 +1,8 @@
 Apartment.class
-PriceSearchResource$1.class
 Database.class
+FacilitiesResource$1.class
 RestProperties.class
+FacilitiesApplication.class
+FacilitiesResource.class
 LogContextInterceptor.class
-PriceSearchResource.class
-PriceSearchServiceHealthCheck.class
-PriceSearchApplication.class
+FacilitiesServiceHealthCheck.class

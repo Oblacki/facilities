@@ -15,8 +15,8 @@ directories:
 
 script:
 - mvn clean package -U
-- docker build -t oblacki/price-search:261217v1 .
+- docker build -t oblacki/facilities:271217v1 .
 
 after_success:
 - docker login -u="$OBLACKI_USER" -p="$OBLACKI_PASS"
-- docker push oblacki/price-search:261217v1
+- docker push oblacki/facilities:271217v1

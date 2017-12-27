@@ -1,12 +1,12 @@
 kumuluzee:
-  name: price-search
+  name: facilities
   env:
     name: dev
   version: 1.0.0
   server:
-    base-url: http://localhost:8083
+    base-url: http://localhost:8084
     http:
-      port: 8083
+      port: 8084
   discovery:
     etcd:
       hosts: http://localhost:2379 #http://192.168.99.100:2379
@@ -19,11 +19,11 @@ kumuluzee:
         threshold: 100000000
   metrics:
       web-instrumentation:
-        - name: price-search-endpoint
-          url-pattern: /v1/price-search/*
+        - name: facilities-endpoint
+          url-pattern: /v1/facilities/*
   logs:
       config-file: '<?xml version="1.0" encoding="UTF-8"?>
-                    <Configuration name="price-search">
+                    <Configuration name="facilities">
                         <Appenders>
                             <Console name="console" target="SYSTEM_OUT">
                                 <PatternLayout pattern="%d %p %marker %m %X %ex %n"/>

@@ -1,0 +1,27 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: facilities-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: facilities
+    spec:
+      containers:
+      - image: oblacki/facilities:271217v1
+        name: facilities
+        env:
+          - name: KUMULUZEE_DISCOVERY_CLUSTER
+            value: bluemix
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8084
+          initialDelaySeconds: 20
+          periodSeconds: 3
+        ports:
+        - containerPort: 8084
+          name: server
+          protocol: TCP
